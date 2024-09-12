@@ -1,0 +1,69 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-margin-top">
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="ion-text-center">Login</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form (ngSubmit)="login()">
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input
+                  type="email"
+                  [(ngModel)]="email"
+                  name="email"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input
+                  type="password"
+                  [(ngModel)]="password"
+                  name="password"
+                ></ion-input>
+              </ion-item>
+              <ion-button expand="full" color="primary" type="submit"
+                >Login</ion-button
+              >
+            </form>
+            <ion-row class="ion-margin-top">
+              <ion-col size="6">
+                <ion-router-link routerLink="/register" class="ion-text-center"
+                  >Need Account?
+                  <span class="ion-text-danger">Register</span></ion-router-link
+                >
+              </ion-col>
+              <ion-col size="6">
+                <ion-router-link
+                  routerLink="/forgot-password"
+                  class="ion-text-center"
+                  >Forgot Password?</ion-router-link
+                >
+              </ion-col>
+            </ion-row>
+            <ion-row class="ion-margin-top ion-justify-content-center">
+              <ion-col size="12">
+                <ion-card>
+                  <ion-card-content
+                    (click)="signInWithGoogle()"
+                    class="ion-text-center"
+                  >
+                    <!-- <img
+                      src="../../../assets/icons8-google-48.png"
+                      alt="Google Sign-In"
+                      height="24px"
+                      width="24px"
+                    /> -->
+                    <p>Sign In with Google</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
